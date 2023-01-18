@@ -36,14 +36,15 @@ a {
   align-items: center;
   font-size: 15px;
 }
-.popTitWrap a:first-child {
+.pop-page-tit {
   border-bottom: 2px solid black;
   font-weight: bold;
 }
-.popTitWrap a:last-child {
+.pop-page-nontit {
   color: #999999;
   font-weight: bold;
 }
+
 .inner {
   padding: 20px 20px;
 }
