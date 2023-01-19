@@ -272,3 +272,33 @@ function openPopupShareBtn(name) {
 function alertbtn() {
   alert("링크가 복사되었습니다. \n원하는 위치에 붙여넣기하세요. ");
 }
+
+function productSum() {
+  totalPrice += price;
+  // 가격 형변환 후 쉼표추가 함수
+  let a = String(totalPrice);
+  var output = [a.slice(0, position), b, a.slice(position)].join("");
+  document.querySelector("#price").innerHTML = output + "원";
+  //갯수
+  amount++;
+  document.querySelector(".MSH-sto-stock").value = amount;
+}
+function productSub() {
+  if (amount > 1) {
+    totalPrice -= price;
+    // 가격 형변환 후 쉼표추가 함수
+    let a = String(totalPrice);
+    var output = [a.slice(0, position), b, a.slice(position)].join("");
+    document.querySelector("#price").innerHTML = output + "원";
+    //갯수
+    amount--;
+    document.querySelector(".MSH-sto-stock").value = amount;
+  } else {
+    document.querySelector(".MSH-sto-stock").value = amount;
+    document.querySelector("#price").innerHTML = str;
+  }
+}
+function basketNumCount() {
+  basketNum++;
+  document.querySelector(".basket-num").innerHTML = basketNum;
+}
