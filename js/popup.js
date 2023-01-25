@@ -47,7 +47,7 @@ function openPopupMobile() {
   popup = window.open("https://www.samsung.com/sec/samsung-pay/home/");
 }
 
-function pop-page-top1() {
+function openPopUpTop1() {
   popup = window.open("/popup/pop-page-top1.html");
 }
 
