@@ -36,11 +36,15 @@ function selecpay() {
     document.querySelector("#pay1color").style.color = "rgb(136, 136, 136)";
     document.querySelector("#pay2color").style.color = "black";
     document.querySelector("#pay2text").style.display = "block";
+    document.querySelector("#pay2display").className = "blue fs-14 span3";
+    document.querySelector("#pay1display").className = "blue fs-14";
   } else {
     document.querySelector("#pay1color").style.color = "black";
     document.querySelector("#pay1text").style.display = "block";
     document.querySelector("#pay2text").style.display = "none";
     document.querySelector("#pay2color").style.color = "rgb(136, 136, 136)";
+    document.querySelector("#pay1display").className = "blue fs-14 span3";
+    document.querySelector("#pay2display").className = "blue fs-14";
   }
 }
 

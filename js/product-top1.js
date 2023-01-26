@@ -57,20 +57,6 @@ function onclickAgree() {
     }
   }
 }
-function selecpay() {
-  let pay = document.querySelector("#pay2");
-  if (pay.checked === true) {
-    document.querySelector("#pay1text").style.display = "none";
-    document.querySelector("#pay1color").style.color = "rgb(136, 136, 136)";
-    document.querySelector("#pay2color").style.color = "black";
-    document.querySelector("#pay2text").style.display = "block";
-  } else {
-    document.querySelector("#pay1color").style.color = "black";
-    document.querySelector("#pay1text").style.display = "block";
-    document.querySelector("#pay2text").style.display = "none";
-    document.querySelector("#pay2color").style.color = "rgb(136, 136, 136)";
-  }
-}
 
 function sum() {
   totalPrice += price;
