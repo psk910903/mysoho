@@ -758,3 +758,11 @@ input[type="checkbox"]:checked::after {
   font-size: 14px;
   color: #666666;
 }
+.check-txt {
+  font-size: 12px;
+  display: none;
+}
+
+.flexbox span {
+  display: none;
+}
