@@ -600,3 +600,8 @@ input[type="checkbox"]:checked::after {
   border: none;
   background-color: white;
 }
+.trash-box {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 75px;
+}

@@ -1,16 +1,36 @@
 function orderInfo(n) {
-  if (document.querySelector(".order-hd-open-" + n).style.display !== "none") {
-    document.querySelector(".span" + n).style.display = "none";
-    document.querySelector(".order-hd-open-" + n).style.display = "none";
-    document.querySelector(".order-hd-close-" + n).style.display = "block";
-    document.querySelector(".order" + n).style.display = "block";
+  // 결제방법
+  if (n === 3) {
+    if (
+      document.querySelector(".order-hd-open-" + n).style.display !== "none"
+    ) {
+      document.querySelector(".order-hd-open-" + n).style.display = "none";
+      document.querySelector(".order-hd-close-" + n).style.display = "block";
+      document.querySelector(".order" + n).style.display = "block";
+      document.querySelector(".pay-checked").style.display = "none";
+    } else {
+      document.querySelector(".order-hd-open-" + n).style.display = "block";
+      document.querySelector(".order-hd-close-" + n).style.display = "none";
+      document.querySelector(".order" + n).style.display = "none";
+      document.querySelector(".pay-checked").style.display = "block";
+    }
   } else {
-    document.querySelector(".span" + n).style.display = "block";
-    document.querySelector(".order-hd-open-" + n).style.display = "block";
-    document.querySelector(".order-hd-close-" + n).style.display = "none";
-    document.querySelector(".order" + n).style.display = "none";
+    if (
+      document.querySelector(".order-hd-open-" + n).style.display !== "none"
+    ) {
+      document.querySelector(".span" + n).style.display = "none";
+      document.querySelector(".order-hd-open-" + n).style.display = "none";
+      document.querySelector(".order-hd-close-" + n).style.display = "block";
+      document.querySelector(".order" + n).style.display = "block";
+    } else {
+      document.querySelector(".span" + n).style.display = "block";
+      document.querySelector(".order-hd-open-" + n).style.display = "block";
+      document.querySelector(".order-hd-close-" + n).style.display = "none";
+      document.querySelector(".order" + n).style.display = "none";
+    }
   }
 }
+
 function onclickCbx() {
   if (document.querySelector("#userJoinFormDiv").style.display !== "block") {
     document.querySelector("#userJoinFormDiv").style.display = "block";
@@ -36,15 +56,17 @@ function selecpay() {
     document.querySelector("#pay1color").style.color = "rgb(136, 136, 136)";
     document.querySelector("#pay2color").style.color = "black";
     document.querySelector("#pay2text").style.display = "block";
-    document.querySelector("#pay2display").className = "blue fs-14 span3";
-    document.querySelector("#pay1display").className = "blue fs-14";
+    document.querySelector("#pay1display").className = "blue fs-14 span3";
+    document.querySelector("#pay2display").className =
+      "blue fs-14 span3 pay-checked";
   } else {
     document.querySelector("#pay1color").style.color = "black";
     document.querySelector("#pay1text").style.display = "block";
     document.querySelector("#pay2text").style.display = "none";
     document.querySelector("#pay2color").style.color = "rgb(136, 136, 136)";
-    document.querySelector("#pay1display").className = "blue fs-14 span3";
-    document.querySelector("#pay2display").className = "blue fs-14";
+    document.querySelector("#pay2display").className = "blue fs-14 span3 ";
+    document.querySelector("#pay1display").className =
+      "blue fs-14 span3 pay-checked";
   }
 }
 
