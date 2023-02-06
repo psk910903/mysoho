@@ -7,16 +7,74 @@
     <title>Document</title>
     <style>
       * {
-        border: 1px solid red;
         margin: 0;
         padding: 0;
+      }
+      body {
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 25px;
+        background-color: #333;
+        color: white;
+        border-bottom: 1px solid #949ca6;
+      }
+      .wrap {
+        display: flex;
+        height: 840px;
+      }
+      .nav {
+        height: 100%;
+        width: 200px;
+        padding: 25px;
+        background-color: #333;
+      }
+      .nav div {
+        display: flex;
+      }
+      .nav a {
+        text-decoration: none;
+        padding: 15px 0;
+        width: 100%;
+        border-bottom: 1px solid #949ca6;
+        color: white;
+      }
+      .head-title {
+        display: flex;
+        align-items: center;
+      }
+      .logout-btn {
+        margin-right: 50px;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .content {
+        padding: 20px;
+        width: 100%;
       }
     </style>
   </head>
 
   <body>
     <div class="header">
-      <div>관리자페이지</div>
+      <h2 class="head-title">관리자페이지</h2>
+      <button class="logout-btn">로그아웃</button>
+    </div>
+    <div class="wrap">
+      <div class="nav">
+        <div><a href=""> 회원 관리</a></div>
+        <div><a href=""> 상품 관리</a></div>
+        <div><a href=""> 주문 관리</a></div>
+        <div><a href=""> 리뷰 관리</a></div>
+        <div><a href=""> 문의 관리</a></div>
+        <div><a href=""> 공지사항 관리</a></div>
+      </div>
+      <div class="content">
+        <!-- 관리 페이지 작성 -->
+      </div>
     </div>
   </body>
 </html>
